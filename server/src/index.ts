@@ -31,7 +31,7 @@ app.use(helmet({
   contentSecurityPolicy: false, // Disable CSP in dev — images are served cross-origin
 }));
 app.use(cors({
-  origin: process.env.CLIENT_URL || 'http://localhost:3000',
+  origin: '*',
   credentials: true
 }));
 app.use(express.json());

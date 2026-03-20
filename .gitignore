@@ -1,22 +1,28 @@
 # Dependencies
 node_modules/
-client/node_modules/
-server/node_modules/
+**/node_modules/
 
 # Environment files
 .env
 .env.local
 .env*.local
-server/.env
-server/prisma/.env
+**/.env
+**/.env.local
 
 # Build output
 client/.next/
 client/out/
 server/dist/
+**/dist/
+**/.next/
+
+# Prisma
+server/prisma/dev.db
+server/prisma/dev.db-journal
 
 # Uploads (local dev only)
-server/public/uploads/
+server/public/uploads/*
+!server/public/uploads/.gitkeep
 
 # OS files
 .DS_Store
