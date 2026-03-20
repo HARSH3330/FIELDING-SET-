@@ -1,26 +1,15 @@
 {
-  "name": "fielding_set.com",
-  "version": "0.1.0",
-  "private": true,
+  "name": "fielding-set",
+  "version": "1.0.0",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
-  },
-  "dependencies": {
-    "next": "16.1.6",
-    "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "dev": "npm-run-all --parallel dev:*",
+    "dev:server": "cd server && npm run dev",
+    "dev:client": "cd client && npm run dev",
+    "build": "npm-run-all build:*",
+    "build:server": "cd server && npm run build",
+    "build:client": "cd client && npm run build"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "16.1.6",
-    "tailwindcss": "^4",
-    "typescript": "^5"
+    "npm-run-all": "^4.1.5"
   }
 }
